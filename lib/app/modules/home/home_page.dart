@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'home_controller.dart';
@@ -11,25 +12,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends ModularState<HomePage, HomeController> {
-  //use 'controller' variable to access controller
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Push Notifications Test'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Center(
-            child: Text(
-              "Example FMC",
-              style: TextStyle(fontSize: 20, color: Colors.black),
-            ),
-          )
-        ],
-      ),
+      body: Container(
+          child: Center(
+        child: Text("Push notification with flutter_modular"),
+      )),
     );
   }
 }
